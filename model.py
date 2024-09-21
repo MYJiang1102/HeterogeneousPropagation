@@ -36,7 +36,7 @@ class DenoisingAutoEncoder(nn.Module):
 
 
 class CKAN(nn.Module):
-    def __init__(self, args, n_entity, n_relation,emb_noise_level=0.3):
+    def __init__(self, args, n_entity, n_relation,emb_noise_level=0.001):
         super(CKAN, self).__init__()
         self._parse_args(args, n_entity, n_relation)
         self.entity_emb = nn.Embedding(self.n_entity, self.dim)
